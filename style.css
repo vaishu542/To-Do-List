@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(45deg, #8baaaa 0%, #ceb8c3 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.card {
+    border: 2px solid rgb(148, 146, 146);
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+}
+
+.cardHeading {
+    display: flex;
+}
+
+.cardHeading img {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: 20px;
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    padding: 20px 15px;
+}
+
+.addTask input {
+    font-size: 1.5rem;
+    border-radius: 30px;
+    border: 2px solid rgb(66, 66, 66);
+    padding: 10px;
+    padding-left: 20px;
+}
+.addTask input:focus{
+    background-color:#fafafa;
+    border: 2px solid rgb(29, 28, 28);
+}
+
+.addTask button {
+    font-size: 1.5rem;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+    background-color: white;
+    border: 2px solid rgb(66, 66, 66);
+}
+
+.addTask button:hover{
+    background-color:#fafafa;
+    border: 2px solid rgb(29, 28, 28);
+    cursor: pointer;
+}
+.list ul {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    padding: 17px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.list ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.list ul li {
+    position: relative;
+    padding-left: 40px; 
+   
+}
+ul li span {
+    position: absolute;
+    font-size: 1.7rem;
+    right: 0; 
+    width: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+ul li span:hover {
+    background-color:#fdfdfa;
+}
+#error{
+    font-size: 1.4rem;
+    color: rgb(201, 57, 57);
+}
+.list ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px; 
+    height: 25px;
+    background-color:#fffff2;
+    border: 1px solid rgb(124, 124, 123);
+    background-image: var(--background-image, url('unchecked.png'));
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 490px) {
+    .addTask input {
+        font-size: 1.5rem;
+        width: 190px;
+        border-radius: 20px;
+    }
+    .addTask button {
+        font-size: 1.2rem;
+        border-radius: 15px;
+        padding: 12px;
+    }
+    .cardHeading img {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 20px;
+    }
+    
+    .card h1 {
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .addTask input {
+        font-size: 1.5rem;
+        width: 160px;
+        border-radius: 20px;
+    }
+    .addTask button {
+        font-size: 1.2rem;
+        border-radius: 15px;
+        padding: 10px 7px;
+    }
+    .cardHeading img {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        top: 20px;
+    }
+    
+    .card h1 {
+        font-size: 1.8rem;
+    }
+}
+
